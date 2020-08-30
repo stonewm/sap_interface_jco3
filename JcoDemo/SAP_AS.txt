@@ -1,0 +1,8 @@
+#SAP Logon parameters
+#Sat Aug 29 23:52:39 CST 2020
+jco.client.lang=EN
+jco.client.client=001
+jco.client.passwd=w123456
+jco.client.user=STONE
+jco.client.sysnr=00
+jco.client.ashost=192.168.44.100
