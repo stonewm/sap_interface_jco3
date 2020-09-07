@@ -1,0 +1,25 @@
+
+**** Error file opened at 20200906 095339 China Standard Time Rel 3.0.9 (2012-07-19) [720.310]
+Error:  >Sun Sep 06 09:53:39,643<    RfcException: [null]
+    message: Connect to SAP gateway failed
+Connection parameters: TYPE=A DEST=ECC ASHOST=192.168.44.100 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '192.168.44.100:3300' not reached
+TIME        Sun Sep 06 09:53:39 2020
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 192.168.44.100:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
