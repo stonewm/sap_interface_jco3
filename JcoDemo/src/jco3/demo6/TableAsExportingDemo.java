@@ -2,7 +2,7 @@ package jco3.demo6;
 
 import com.sap.conn.jco.*;
 import jco3.jcoUtils.Utils;
-import org.junit.Test;
+
 
 public class TableAsExportingDemo {
     public JCoTable getCocdList() throws JCoException {

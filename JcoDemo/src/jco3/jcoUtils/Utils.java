@@ -21,7 +21,7 @@ public class Utils {
     }
 
     private static void printLines(JCoTable table) {
-        for (int i = 0; i < table.getNumColumns(); i++){
+        for (int i = 0; i < table.getNumRows(); i++){
             // set current row position (starting from 0)
             table.setRow(i);
 
