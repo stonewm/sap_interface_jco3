@@ -1,0 +1,41 @@
+
+**** Error file opened at 20210723 145925 China Standard Time Rel 3.0.9 (2012-07-19) [720.310]
+Error:  >Fri Jul 23 14:59:25,365<    RfcException: [null]
+    message: Connect to SAP gateway failed
+Connection parameters: TYPE=A DEST=ECC ASHOST=192.168.65.100 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '192.168.65.100:3300' not reached
+TIME        Fri Jul 23 14:59:25 2021
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 192.168.65.100:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+
+**** Error file opened at 20210723 161348 China Standard Time Rel 3.0.9 (2012-07-19) [720.310]
+Exception thrown [Fri Jul 23 16:13:48,585]:Exception thrown by application running in JCo Server
+com.sap.conn.jco.JCoRuntimeException: (105) JCO_ERROR_APPLICATION_EXCEPTION: handler for BAPI_COMPANYCODE_GETDETAIL was not installed
+	at com.sap.conn.jco.server.DefaultServerHandlerFactory.getCallHandler(DefaultServerHandlerFactory.java:66)
+	at com.sap.conn.jco.server.DefaultServerHandlerFactory$FunctionHandlerFactory.getCallHandler(DefaultServerHandlerFactory.java:130)
+	at com.sap.conn.jco.rt.DefaultServerWorker$FunctionDispatcher.handleRequest(DefaultServerWorker.java:1006)
+	at com.sap.conn.jco.rt.DefaultServerWorker$FunctionDispatcher.handleRequest(DefaultServerWorker.java:980)
+	at com.sap.conn.jco.rt.DefaultServerWorker.dispatchRequest(DefaultServerWorker.java:160)
+	at com.sap.conn.jco.rt.MiddlewareJavaRfc$JavaRfcServer.dispatchRequest(MiddlewareJavaRfc.java:3366)
+	at com.sap.conn.jco.rt.MiddlewareJavaRfc$JavaRfcServer.listen(MiddlewareJavaRfc.java:2415)
+	at com.sap.conn.jco.rt.DefaultServerWorker.dispatch(DefaultServerWorker.java:284)
+	at com.sap.conn.jco.rt.DefaultServerWorker.loop(DefaultServerWorker.java:369)
+	at com.sap.conn.jco.rt.DefaultServerWorker.run(DefaultServerWorker.java:245)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+

@@ -1,0 +1,8 @@
+# SAP for Java server parameters
+
+jco.server.gwhost=sapecc6
+jco.server.gwserv=sapgw00
+jco.server.progid=JCO3_TEST
+jco.server.connection_count=2
+jco.server.repository_destination=ECC
+

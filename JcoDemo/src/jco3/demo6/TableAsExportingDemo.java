@@ -1,7 +1,7 @@
 package jco3.demo6;
 
 import com.sap.conn.jco.*;
-import jco3.jcoUtils.Utils;
+import org.junit.Test;
 
 
 public class TableAsExportingDemo {
@@ -18,6 +18,6 @@ public class TableAsExportingDemo {
     @Test
     public void testGetCocdList() throws JCoException {
         JCoTable companies = getCocdList();
-        Utils.printJcoTable(companies);
+//        Utils.printJcoTable(companies);
     }
 }

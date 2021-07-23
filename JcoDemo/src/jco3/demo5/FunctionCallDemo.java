@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class FunctionCallDemo {
 
-    public void getCoCdDetail(String cocd) throws JCoException {
+    public JCoStructure getCoCdDetail(String cocd) throws JCoException {
         // JCoDestination : backend SAP system
         JCoDestination dest = JCoDestinationManager.getDestination("ECC");
 
@@ -24,18 +24,23 @@ public class FunctionCallDemo {
         JCoStructure cocdDetail = fm.getExportParameterList()
                                     .getStructure("COMPANYCODE_DETAIL");
 
-        this.printStructure(cocdDetail);
+        return cocdDetail;
 
+    }
+
+    public void printCocdData(String cocd) throws JCoException {
+        JCoStructure cocdDetail = this.getCoCdDetail(cocd);
+        this.printStructure(cocdDetail);
     }
 
     private void printStructure(JCoStructure stru){
         for (JCoField field : stru){
-            System.out.println(String.format("%s \t %s", field.getName(), field.getString()));
+            System.out.println(String.format("%s: %s", field.getName(), field.getValue()));
         }
     }
 
     @Test
     public void testGetCocdDetail() throws JCoException {
-        this.getCoCdDetail("Z900");
+        this.printCocdData("Z900");
     }
 }
