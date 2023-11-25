@@ -39,3 +39,28 @@ com.sap.conn.jco.JCoRuntimeException: (105) JCO_ERROR_APPLICATION_EXCEPTION: han
 	at com.sap.conn.jco.rt.DefaultServerWorker.run(DefaultServerWorker.java:245)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 
+
+**** Error file opened at 20231125 213427 China Standard Time Rel 3.0.9 (2012-07-19) [720.310]
+Error:  >Sat Nov 25 21:34:27,084<    RfcException: [null]
+    message: Connect to SAP gateway failed
+Connection parameters: TYPE=A DEST=ECC ASHOST=192.168.44.100 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '192.168.44.100:3300' not reached
+TIME        Sat Nov 25 21:34:27 2023
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3286
+DETAIL      NiPConnect2: 192.168.44.100:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
